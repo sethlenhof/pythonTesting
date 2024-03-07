@@ -76,11 +76,6 @@
       </BuildableProductRunnable>
       <EnvironmentVariables>
          <EnvironmentVariable
-            key = "PYTHON_LOADER_LOGGING"
-            value = "TRUE&#10;"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
             key = "PYTHON_VERSION"
             value = "3.11"
             isEnabled = "YES">

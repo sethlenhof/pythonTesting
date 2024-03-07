@@ -17,13 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
               let libDynloadPath = Bundle.main.path(forResource: "python-stdlib/lib-dynload", ofType: nil) else {
             fatalError("Unable to find Python standard library")
         }
-        setenv("PYTHONHOME", stdLibPath, 1)
-        setenv("PYTHONPATH", "\(stdLibPath):\(libDynloadPath)", 1)
+        let mergedPaths = "\(stdLibPath):\(libDynloadPath)"
+        setenv("PYTHONHOME", mergedPaths, 1)
+        setenv("PYTHONPATH", mergedPaths, 1)
         
         Py_Initialize()
         // we now have a Python interpreter ready to be used
         // Now PythonKit is ready to be used
         // Example of using PythonKit
+        
         let sys = Python.import("sys")
         print(sys.path)
 

@@ -19,10 +19,10 @@
 		302BF29C2B99A00700A453D2 /* dylib-Info-template.plist in Resources */ = {isa = PBXBuildFile; fileRef = 302BF29B2B99A00700A453D2 /* dylib-Info-template.plist */; };
 		302BF29F2B99A0DD00A453D2 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 302BF29E2B99A0DD00A453D2 /* PythonKit */; };
 		302BF2A12B99A16600A453D2 /* runPython.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302BF2A02B99A16600A453D2 /* runPython.swift */; };
-		302BF2A32B99A17F00A453D2 /* pythonShit.py in Resources */ = {isa = PBXBuildFile; fileRef = 302BF2A22B99A17F00A453D2 /* pythonShit.py */; };
 		302BF2AF2B99AC4300A453D2 /* python-stdlib in Resources */ = {isa = PBXBuildFile; fileRef = 302BF2972B999F2C00A453D2 /* python-stdlib */; };
 		302BF2B22B99B3E800A453D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302BF2B12B99B3E800A453D2 /* AppDelegate.swift */; };
 		302BF2B62B99BC0D00A453D2 /* Python.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302BF2B52B99BC0C00A453D2 /* Python.xcframework */; };
+		302BF2B82B9A1CEE00A453D2 /* pythonScript.py in Resources */ = {isa = PBXBuildFile; fileRef = 302BF2A22B99A17F00A453D2 /* pythonScript.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,7 @@
 		302BF2972B999F2C00A453D2 /* python-stdlib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "python-stdlib"; sourceTree = "<group>"; };
 		302BF29B2B99A00700A453D2 /* dylib-Info-template.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "dylib-Info-template.plist"; sourceTree = "<group>"; };
 		302BF2A02B99A16600A453D2 /* runPython.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = runPython.swift; sourceTree = "<group>"; };
-		302BF2A22B99A17F00A453D2 /* pythonShit.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = pythonShit.py; sourceTree = "<group>"; };
+		302BF2A22B99A17F00A453D2 /* pythonScript.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = pythonScript.py; sourceTree = "<group>"; };
 		302BF2B12B99B3E800A453D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		302BF2B52B99BC0C00A453D2 /* Python.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Python.xcframework; sourceTree = "<group>"; };
 		302BF2B72B99BC5200A453D2 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "Python.xcframework/ios-arm64/Headers/module.modulemap"; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 				302BF2B12B99B3E800A453D2 /* AppDelegate.swift */,
 				302BF2662B999E9200A453D2 /* ContentView.swift */,
 				302BF2A02B99A16600A453D2 /* runPython.swift */,
-				302BF2A22B99A17F00A453D2 /* pythonShit.py */,
+				302BF2A22B99A17F00A453D2 /* pythonScript.py */,
 				302BF2682B999E9400A453D2 /* Assets.xcassets */,
 				302BF29B2B99A00700A453D2 /* dylib-Info-template.plist */,
 				302BF26D2B999E9400A453D2 /* Persistence.swift */,
@@ -276,11 +276,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				302BF2B82B9A1CEE00A453D2 /* pythonScript.py in Resources */,
 				302BF2AF2B99AC4300A453D2 /* python-stdlib in Resources */,
 				302BF26C2B999E9400A453D2 /* Preview Assets.xcassets in Resources */,
 				302BF29C2B99A00700A453D2 /* dylib-Info-template.plist in Resources */,
 				302BF2692B999E9400A453D2 /* Assets.xcassets in Resources */,
-				302BF2A32B99A17F00A453D2 /* pythonShit.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +515,7 @@
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"pythonTesting/Preview Content\"";
 				DEVELOPMENT_TEAM = 577U546VQV;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -550,6 +551,7 @@
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"pythonTesting/Preview Content\"";
 				DEVELOPMENT_TEAM = 577U546VQV;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
