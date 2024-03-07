@@ -10,4 +10,3 @@ module Python {
     export *
     link "Python"
 }
-
