@@ -9,7 +9,6 @@ import Foundation
 import PythonKit
 
 
-
 func RunPythonScript() -> PythonObject{
     let sys = Python.import("sys")
     sys.path.append("/Users/sethlenhof/Code/testingPython/testingPython/")
